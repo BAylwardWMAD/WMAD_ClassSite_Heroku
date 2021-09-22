@@ -1,0 +1,25 @@
+footer {
+    width: 100%;
+    margin-top: 4rem;
+    height: 100px;
+    .footer-info {
+        padding: 1rem 2rem;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        a img {
+            max-height: 50px;
+        }
+        a {
+            text-decoration: none;
+            color: #fff;
+            i {
+                font-size: 2rem;
+                color: #fff;
+                &:hover {
+                    color: #000;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,140 @@
+.navBar {
+    z-index: 98;
+    position: fixed;
+    top: 0;
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 3rem;
+    transition: top 300ms;
+    #home-link {
+        width: 20%;
+        #logo {
+            width: 100%;
+            padding: 1rem;
+        }
+    }
+    h2 {
+        color: #fff;
+        font-weight: 300;
+        pointer-events: none;
+    }
+    .hamburger {
+        z-index: 99;
+        width: 2.5em;
+        height: 2em;
+        position: relative;
+        cursor: pointer;
+        .hamburger_line {
+            height: 3px;
+            border-radius: 50px;
+            width: 100%;
+            background-color: #fff;
+            margin: 8px 0;
+            transition: transform ease-in-out 300ms;
+        }
+        .line1 {
+            transform: rotate(45deg);
+            position: absolute;
+            top: 7px;
+        }
+        .line2 {
+            transform: rotate(-45deg);
+            position: absolute;
+            bottom: 6px;
+        }
+    }
+    .navList {
+        list-style: none;
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 20%;
+        background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .8)) center center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        li {
+            font-size: clamp(1.3rem, 3vw, 1.8rem);
+            padding: 2rem 0;
+            a {
+                text-decoration: none;
+                color: #fff;
+                font-weight: 300;
+                transition: all linear 300ms;
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 2px;
+                    width: 100%;
+                    background-color: #fff;
+                    transform: scale(0);
+                    transition: transform 200ms linear;
+                    transform-origin: left;
+                }
+                &:hover::after {
+                    transform: scale(1);
+                }
+            }
+        }
+        transform:translateX(100%);
+        transition:transform ease-in-out 300ms;
+    }
+    .navList.toggle {
+        transform: translateX(0);
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    .navBar {
+        margin: 0;
+        justify-content: space-between;
+        #home-link {
+            width: 37%;
+            #logo {
+                width: 100%;
+                padding: 1rem;
+            }
+        }
+        h2 {
+            display: none;
+        }
+        .navList {
+            width: 70%;
+            background: #000;
+            background-size: cover;
+            li {
+                padding: 2rem 0;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:450px) {
+    .navBar {
+        #home-link {
+            width: 50%;
+            min-width: 150px;
+        }
+    }
+}
+
+@media only screen and (max-width:290px) {
+    .navBar {
+        max-width: 100%;
+        margin: 0;
+        // padding: 0;
+        #home-link {
+            width: 50%;
+            min-width: unset;
+        }
+    }
+}

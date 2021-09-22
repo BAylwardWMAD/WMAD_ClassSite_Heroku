@@ -1,0 +1,28 @@
+{
+  "name": "WMAD_Class_Site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/app",
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BAylwardWMAD/WMAD_Class_Site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BAylwardWMAD/WMAD_Class_Site/issues"
+  },
+  "homepage": "https://github.com/BAylwardWMAD/WMAD_Class_Site#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}

@@ -1,0 +1,1372 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap");
+.navBar {
+  z-index: 98;
+  position: fixed;
+  top: 0;
+  background: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 0 3rem;
+  -webkit-transition: top 300ms;
+  transition: top 300ms;
+}
+
+.navBar #home-link {
+  width: 20%;
+}
+
+.navBar #home-link #logo {
+  width: 100%;
+  padding: 1rem;
+}
+
+.navBar h2 {
+  color: #fff;
+  font-weight: 300;
+  pointer-events: none;
+}
+
+.navBar .hamburger {
+  z-index: 99;
+  width: 2.5em;
+  height: 2em;
+  position: relative;
+  cursor: pointer;
+}
+
+.navBar .hamburger .hamburger_line {
+  height: 3px;
+  border-radius: 50px;
+  width: 100%;
+  background-color: #fff;
+  margin: 8px 0;
+  -webkit-transition: -webkit-transform ease-in-out 300ms;
+  transition: -webkit-transform ease-in-out 300ms;
+  transition: transform ease-in-out 300ms;
+  transition: transform ease-in-out 300ms, -webkit-transform ease-in-out 300ms;
+}
+
+.navBar .hamburger .line1 {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  top: 7px;
+}
+
+.navBar .hamburger .line2 {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  position: absolute;
+  bottom: 6px;
+}
+
+.navBar .navList {
+  list-style: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 20%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.8))) center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)) center center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform ease-in-out 300ms;
+  transition: -webkit-transform ease-in-out 300ms;
+  transition: transform ease-in-out 300ms;
+  transition: transform ease-in-out 300ms, -webkit-transform ease-in-out 300ms;
+}
+
+.navBar .navList li {
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  padding: 2rem 0;
+}
+
+.navBar .navList li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 300;
+  -webkit-transition: all linear 300ms;
+  transition: all linear 300ms;
+  position: relative;
+}
+
+.navBar .navList li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 200ms linear;
+  transition: -webkit-transform 200ms linear;
+  transition: transform 200ms linear;
+  transition: transform 200ms linear, -webkit-transform 200ms linear;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.navBar .navList li a:hover::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.navBar .navList.toggle {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+@media only screen and (max-width: 1000px) {
+  .navBar {
+    margin: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .navBar #home-link {
+    width: 37%;
+  }
+  .navBar #home-link #logo {
+    width: 100%;
+    padding: 1rem;
+  }
+  .navBar h2 {
+    display: none;
+  }
+  .navBar .navList {
+    width: 70%;
+    background: #000;
+    background-size: cover;
+  }
+  .navBar .navList li {
+    padding: 2rem 0;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .navBar #home-link {
+    width: 50%;
+    min-width: 150px;
+  }
+}
+
+@media only screen and (max-width: 290px) {
+  .navBar {
+    max-width: 100%;
+    margin: 0;
+  }
+  .navBar #home-link {
+    width: 50%;
+    min-width: unset;
+  }
+}
+
+.hero-main-content {
+  width: 100%;
+  height: 500px;
+  background: linear-gradient(45deg, black, rgba(0, 0, 0, 0.1)), url("../images/bg-hero.jpg") center center fixed no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding-top: 8rem;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 73%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 73%, 0 100%);
+}
+
+.hero-main-content .hero_info {
+  padding: 5rem;
+  width: 50%;
+}
+
+.hero-main-content .hero_info h1 {
+  font-weight: 300;
+}
+
+.hero-main-content .hero_info h3 {
+  font-weight: 300;
+}
+
+.intro_info {
+  padding-top: 1rem;
+  width: 100%;
+  font-size: 1.2rem;
+  min-height: 200px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 73%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 73%, 0 100%);
+}
+
+.intro_info p {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.index_updates {
+  width: 80%;
+  margin: 0 auto 8rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-height: 500px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.index_updates::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #000;
+}
+
+.index_updates::-webkit-scrollbar {
+  width: 6px;
+  background-color: #000;
+}
+
+.index_updates::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 0, 0, 0.8);
+}
+
+.index_updates .updates-info {
+  width: 40%;
+  text-align: left;
+  margin-left: 2rem;
+  padding: 3rem 2rem;
+}
+
+.index_updates .updates-info ul {
+  list-style: none;
+  font-size: 1.2rem;
+  padding-bottom: 4rem;
+}
+
+.index_updates .updates-info ul li {
+  padding: .3rem 0;
+}
+
+.index_updates .updates-info ul li span {
+  font-weight: 600;
+}
+
+.index_updates .updates-info ul li a {
+  color: blue;
+  text-decoration: none;
+}
+
+.index_updates .updates-info ul li a:hover {
+  color: red;
+}
+
+.index_updates img {
+  width: 40%;
+  max-width: 100%;
+  height: auto;
+  -webkit-box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+  border-radius: 50px;
+}
+
+.index_cards_container {
+  width: 100%;
+  padding: 3rem 0 6rem 0;
+}
+
+.index_cards_container .cards {
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5rem;
+}
+
+.index_cards_container .cards .card1 {
+  background: url("../images/schedule.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.index_cards_container .cards .card2 {
+  background: url("../images/weather.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.index_cards_container .cards .card3 {
+  background: url("../images/important_dates.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.index_cards_container .cards .card4 {
+  background: url("../images/home.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.index_cards_container .cards .card {
+  padding: 15rem 0 0 0;
+  position: relative;
+  max-width: 35ch;
+  border-radius: 15px;
+  overflow: hidden;
+  -webkit-transition: -webkit-transform ease-in-out 200ms;
+  transition: -webkit-transform ease-in-out 200ms;
+  transition: transform ease-in-out 200ms;
+  transition: transform ease-in-out 200ms, -webkit-transform ease-in-out 200ms;
+  min-width: 32%;
+}
+
+.index_cards_container .cards .card .card-content {
+  padding: 1.5rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(30%, rgba(0, 0, 0, 0.5)), to(black));
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) 30%, black);
+  -webkit-transform: translateY(70%);
+          transform: translateY(70%);
+  -webkit-transition: -webkit-transform ease 500ms;
+  transition: -webkit-transform ease 500ms;
+  transition: transform ease 500ms;
+  transition: transform ease 500ms, -webkit-transform ease 500ms;
+}
+
+.index_cards_container .cards .card .card-title {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 1.8rem;
+  margin-bottom: .5rem;
+}
+
+.index_cards_container .cards .card .card-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -1.5rem;
+  width: 100%;
+  height: 3px;
+  background-color: #9b0000;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform linear 400ms;
+  transition: -webkit-transform linear 400ms;
+  transition: transform linear 400ms;
+  transition: transform linear 400ms, -webkit-transform linear 400ms;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.index_cards_container .cards .card button {
+  font-family: 'Montserrat', sans-serif;
+  padding: .7rem 1.5rem;
+  background: transparent;
+  border: 1px solid #fff;
+  margin: 1rem;
+  color: #fff;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-transition: all ease-in-out 150ms;
+  transition: all ease-in-out 150ms;
+}
+
+.index_cards_container .cards .card button a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.index_cards_container .cards .card button:hover {
+  -webkit-box-shadow: 0 0 5px #fff;
+          box-shadow: 0 0 5px #fff;
+  background-color: #fff;
+  -webkit-transform: translateX(5%);
+          transform: translateX(5%);
+  color: #000;
+  font-weight: 600;
+}
+
+.index_cards_container .cards .card:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.index_cards_container .cards .card:hover .card-title::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.index_cards_container .cards .card:hover .card-content {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.index_textbooks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 4rem 0;
+  max-height: unset;
+  overflow: unset;
+}
+
+.index_textbooks .updates-info {
+  width: 40%;
+  text-align: left;
+  padding: 0 4rem;
+}
+
+.index_textbooks .updates-info ul {
+  list-style: none;
+  font-size: 1.2rem;
+  padding-bottom: 2rem;
+}
+
+.index_textbooks .updates-info ul li {
+  padding: .3rem 0;
+}
+
+.index_textbooks .updates-info ul li span {
+  font-weight: 600;
+}
+
+.index_textbooks .updates-info ul li a {
+  color: blue;
+  text-decoration: none;
+}
+
+.index_textbooks .updates-info ul li a:hover {
+  color: red;
+}
+
+.index_textbooks img {
+  width: 40%;
+  max-width: 80%;
+  height: auto;
+}
+
+@media only screen and (max-width: 1000px) {
+  .hero-main-content .hero_info {
+    padding: 1rem;
+    width: 100%;
+    margin: 0;
+  }
+  .hero-main-content .hero_info h1 {
+    font-weight: 300;
+  }
+  .intro_info {
+    padding: 1rem 1rem 5rem 1rem;
+    width: 100%;
+    font-size: 1.2rem;
+    min-height: 200px;
+  }
+  .intro_info p {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .index_updates {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .index_updates img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  .index_updates .updates-info {
+    width: 80%;
+  }
+  .index_cards_container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .index_cards_container .cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .index_cards_container .cards .card {
+    min-width: unset;
+  }
+  .index_textbooks {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .index_textbooks .updates-info {
+    width: 50%;
+    text-align: left;
+    padding: 4rem 0;
+  }
+  .index_textbooks img {
+    max-width: 80%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .hero-main-content {
+    padding-top: 5rem;
+  }
+  .hero-main-content .hero_info {
+    padding: 1rem;
+    width: 100%;
+    margin: 0;
+  }
+  .hero-main-content .hero_info h1 {
+    font-weight: 300;
+    font-size: clamp(1.4rem, 3vw, 3rem);
+  }
+  .index_cards_container {
+    width: 100%;
+  }
+  .index_cards_container .cards .card .card-content {
+    -webkit-transform: translateY(74%);
+            transform: translateY(74%);
+    min-width: 25ch;
+  }
+  .index_updates .updates-info {
+    width: 90%;
+  }
+  .index_textbooks {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .index_textbooks .updates-info {
+    width: 70%;
+    text-align: left;
+    padding: 4rem 0;
+  }
+  .index_textbooks .updates-info h1 {
+    font-size: clamp(1.4rem, 3vw, 3rem);
+  }
+  .index_textbooks img {
+    max-width: 80%;
+  }
+}
+
+footer {
+  width: 100%;
+  margin-top: 4rem;
+  height: 100px;
+}
+
+footer .footer-info {
+  padding: 1rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .footer-info a img {
+  max-height: 50px;
+}
+
+footer .footer-info a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer .footer-info a i {
+  font-size: 2rem;
+  color: #fff;
+}
+
+footer .footer-info a i:hover {
+  color: #000;
+}
+
+.schedule-intro {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3rem;
+}
+
+.schedule-intro .snr-switch {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 34px;
+  margin-top: 4rem;
+}
+
+.schedule-intro .snr-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.schedule-intro .snr-switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.schedule-intro .snr-switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.schedule-intro input:checked + .slider {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.schedule-intro input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+.schedule-intro input:checked + .slider:before {
+  -webkit-transform: translateX(65px);
+          transform: translateX(65px);
+}
+
+.schedule-intro .slider.round {
+  border-radius: 34px;
+}
+
+.schedule-intro .slider.round:before {
+  border-radius: 50%;
+}
+
+.schedule_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding: 5rem 4rem;
+  gap: 10rem;
+}
+
+.schedule_container .calendar {
+  width: 45rem;
+  height: 52rem;
+  background-color: #222227;
+  -webkit-box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+}
+
+.schedule_container .calendar .month {
+  width: 100%;
+  height: 12rem;
+  background: linear-gradient(320deg, rgba(155, 0, 0, 0.9), black) center center no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2rem;
+  text-align: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.schedule_container .calendar .month i {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.schedule_container .calendar .month h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.schedule_container .calendar .month p {
+  font-size: clamp(1rem, 2vw, 1.6rem);
+}
+
+.schedule_container .calendar .weekdays {
+  width: 100%;
+  height: 5rem;
+  padding: 0 .4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.schedule_container .calendar .weekdays div {
+  font-size: clamp(0.5rem, 1.5rem, 1.5rem);
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  width: calc(44.2rem/7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.schedule_container .calendar .days {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (14%)[7];
+      grid-template-columns: repeat(7, 14%);
+  padding: 0.2rem;
+}
+
+.schedule_container .calendar .days div {
+  font-size: 1.4rem;
+  margin: .3rem;
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  -webkit-transition: background-color ease 200ms;
+  transition: background-color ease 200ms;
+}
+
+.schedule_container .calendar .days div:hover:not(.today) {
+  background-color: #262626;
+  border: .2rem solid #777;
+  cursor: pointer;
+}
+
+.schedule_container .calendar .prev-date,
+.schedule_container .calendar .next-date {
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.schedule_container .calendar .current {
+  background: linear-gradient(320deg, rgba(155, 0, 0, 0.9), black) center center no-repeat;
+  background-size: cover;
+}
+
+.schedule_container .schedule-info {
+  opacity: 0;
+  -webkit-transition: opacity 300ms ease;
+  transition: opacity 300ms ease;
+  background-color: #fff;
+  color: #000;
+  width: 30%;
+  padding: 3rem;
+  border-radius: 20px;
+}
+
+.schedule_container .schedule-info h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.schedule_container .schedule-info ul {
+  list-style: none;
+}
+
+.schedule_container .schedule-info ul li .class {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem 0;
+  position: relative;
+}
+
+.schedule_container .schedule-info ul li .class h3,
+.schedule_container .schedule-info ul li .class p {
+  margin-top: 1rem;
+}
+
+.schedule_container .schedule-info ul li .class h3 {
+  font-size: 1.5rem;
+}
+
+.schedule_container .schedule-info ul li .class p {
+  font-size: 1.2rem;
+  text-align: right;
+}
+
+.schedule_container .schedule-info ul li .class::after {
+  content: "";
+  width: 50%;
+  position: absolute;
+  bottom: -.5rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 2px;
+  background-color: #900;
+  border-radius: 20px;
+}
+
+.schedule_container .schedule-info ul li .lunch {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media only screen and (max-width: 1550px) {
+  .schedule_container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .schedule_container .schedule-info {
+    background-color: #fff;
+    color: #000;
+    width: 100%;
+    padding: 3rem;
+    border-radius: 20px;
+  }
+  .schedule_container .schedule-info h2 {
+    font-size: 2rem;
+  }
+  .schedule_container .schedule-info ul {
+    list-style: none;
+  }
+  .schedule_container .schedule-info ul li .class {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 1rem 0;
+    position: relative;
+  }
+  .schedule_container .schedule-info ul li .class h3,
+  .schedule_container .schedule-info ul li .class p {
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .schedule_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    padding: 5rem 0;
+    gap: 10rem;
+  }
+  .schedule_container .calendar {
+    width: 100%;
+    height: 52rem;
+    background-color: #222227;
+    -webkit-box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+  }
+  .schedule_container .calendar .month {
+    width: 100%;
+    height: 12rem;
+    background: linear-gradient(320deg, rgba(155, 0, 0, 0.9), black) center center no-repeat;
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 .5rem;
+    text-align: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  }
+  .schedule_container .calendar .month i {
+    font-size: 2.5rem;
+    cursor: pointer;
+  }
+  .schedule_container .calendar .month h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1rem;
+  }
+  .schedule_container .calendar .month p {
+    font-size: clamp(1rem, 2vw, 1.6rem);
+  }
+  .schedule_container .calendar .weekdays {
+    width: 100%;
+    height: 5rem;
+    padding: 0 .4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .schedule_container .calendar .weekdays div {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    width: calc(100%/7);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  }
+  .schedule_container .calendar .days {
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (14%)[7];
+        grid-template-columns: repeat(7, 14%);
+    padding: 0.2rem;
+  }
+  .schedule_container .calendar .days div {
+    font-size: 1.4rem;
+    margin: .3rem;
+  }
+  .schedule_container .calendar .days div:hover:not(.today) {
+    background-color: unset;
+    border: unset;
+    cursor: unset;
+  }
+  .schedule_container .schedule-info {
+    padding: 3rem .5rem;
+    border-radius: 20px;
+  }
+  .schedule_container .schedule-info h2 {
+    font-size: 2rem;
+  }
+  .schedule_container .schedule-info ul {
+    width: 100%;
+  }
+  .schedule_container .schedule-info ul li {
+    width: 100%;
+  }
+  .schedule_container .schedule-info ul li .class {
+    width: 100%;
+  }
+}
+
+.important-dates_side-bar {
+  z-index: 99;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-transform: translateX(-88%);
+          transform: translateX(-88%);
+  -webkit-transition: -webkit-transform linear 300ms;
+  transition: -webkit-transform linear 300ms;
+  transition: transform linear 300ms;
+  transition: transform linear 300ms, -webkit-transform linear 300ms;
+}
+
+.important-dates_side-bar .id-side-btn {
+  background-color: #000;
+  width: 50px;
+  border-radius: 0 20px 20px 0;
+  padding: .5rem;
+  height: 100%;
+  margin-top: 20rem;
+}
+
+.important-dates_side-bar .id-side-btn .sidebar-line {
+  width: 27px;
+  height: 3px;
+  background-color: #fff;
+  margin: 1rem 0;
+  -webkit-transition: -webkit-transform linear 200ms;
+  transition: -webkit-transform linear 200ms;
+  transition: transform linear 200ms;
+  transition: transform linear 200ms, -webkit-transform linear 200ms;
+}
+
+.important-dates_side-bar .id-side-btn .side-line1 {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.important-dates_side-bar .id-side-btn .side-line1.side-line-toggle {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.important-dates_side-bar .id-side-btn .side-line2 {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.important-dates_side-bar .id-side-btn .side-line2.side-line-toggle {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.id-side-content {
+  background-color: #000;
+  padding: 2rem;
+  max-width: 372px;
+}
+
+.id-side-content h2 {
+  padding-bottom: 1rem;
+}
+
+.id-side-content ul {
+  list-style: none;
+}
+
+.id-side-content ul li {
+  margin: .8rem 0;
+}
+
+.important-dates_side-bar.slide-out {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.weather-section_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5rem;
+  margin: 8rem 0;
+}
+
+.weather-section_container .five-day-container {
+  min-height: 400px;
+  width: 30%;
+  min-width: 280px;
+  border-radius: 20px;
+  background: linear-gradient(320deg, rgba(155, 0, 0, 0.9), black) center center no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.weather-section_container .five-day-container .five-day {
+  width: 80%;
+  min-height: 100px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #fff;
+}
+
+.weather-section_container .five-day-container .five-day * {
+  margin: 0 1rem;
+  font-size: 1.3rem;
+  text-shadow: 0 2px rgba(0, 0, 0, 0.6);
+}
+
+.weather-section_container .weather_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 400px;
+  width: 30%;
+  min-width: 280px;
+  border-radius: 20px;
+}
+
+.weather-section_container .weather_container header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px 15px 15px;
+}
+
+.weather-section_container .weather_container header input {
+  width: 100%;
+  max-width: 280px;
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  outline: none;
+  color: #313131;
+  border-radius: 16px;
+  font-size: 1.3rem;
+}
+
+.weather-section_container .weather_container header input:focus {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.weather-section_container .weather_container main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  padding: 25px 25px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.weather-section_container .weather_container main .location .city {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.weather-section_container .weather_container main .location .date {
+  font-size: 1rem;
+}
+
+.weather-section_container .weather_container main .current .temp {
+  font-size: 5rem;
+  margin: 30px 0;
+  text-shadow: 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.weather-section_container .weather_container main .current .temp span {
+  font-weight: 500;
+}
+
+.weather-section_container .weather_container main .current .weather,
+.weather-section_container .weather_container main .current .feels-like {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 15px;
+  text-shadow: 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.weather-section_container .weather_container main .current .hi-low,
+.weather-section_container .weather_container main .current .humidity {
+  font-size: 24px;
+  font-weight: 500;
+  text-shadow: 0px 3px rgba(0, 0, 0, 0.4);
+}
+
+@media only screen and (max-width: 1200px) {
+  .weather-section_container .five-day-container .five-day * {
+    margin: 0;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    padding: 0 1rem;
+  }
+}
+
+.form-container {
+  width: 50%;
+  margin: 5rem auto;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  color: #000;
+}
+
+.form-container input[type=text],
+.form-container select,
+.form-container textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+.form-container input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-container input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 1.3;
+}
+
+body {
+  background: linear-gradient(320deg, rgba(155, 0, 0, 0.9), black) center center no-repeat;
+  background-size: cover;
+  color: #fff;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body .wip {
+  pointer-events: none;
+}
+
+body::-webkit-scrollbar {
+  width: .3rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #010411;
+  width: .3rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgba(155, 0, 0, 0.9);
+  width: .3rem;
+}
+/*# sourceMappingURL=style.css.map */

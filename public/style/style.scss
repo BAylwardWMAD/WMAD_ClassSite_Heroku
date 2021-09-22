@@ -1,0 +1,38 @@
+@import '_nav.scss';
+@import '_index.scss';
+@import '_footer.scss';
+@import '_schedules.scss';
+@import '_datesSideBar.scss';
+@import '_weather.scss';
+@import '_boards.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.3;
+}
+
+body {
+    background: linear-gradient(320deg, rgba(155, 0, 0, .9), rgba(0, 0, 0, 1)) center center no-repeat;
+    background-size: cover;
+    color: #fff;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    .wip {
+        pointer-events: none;
+    }
+    &::-webkit-scrollbar {
+        width: .3rem;
+    }
+    &::-webkit-scrollbar-track {
+        background: rgb(1, 4, 17);
+        width: .3rem;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: rgba(155, 0, 0, .9);
+        width: .3rem;
+    }
+}
