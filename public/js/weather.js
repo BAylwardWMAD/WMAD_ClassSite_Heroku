@@ -77,7 +77,6 @@ export function weatherSearch() {
 
             fiveDayDateArray[i - 1].innerHTML = dateNow.toDateString();
 
-
             fiveDayTempsArray[i - 1].innerHTML = `${Math.round(weather.list[x].main.temp)}°C`;
 
             fiveDayWeather[i - 1].innerHTML = `${weather.list[x].weather[0].description}`;

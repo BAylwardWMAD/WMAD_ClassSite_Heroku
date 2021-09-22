@@ -44,9 +44,6 @@ sideBarBtn.addEventListener('click', () => {
     document.querySelector('.side-line2').classList.toggle('side-line-toggle');
 });
 
-
-
-
 if (document.querySelector('.schedule-intro')) {
     calender.loadCalendar();
     calender.useCalendar();
