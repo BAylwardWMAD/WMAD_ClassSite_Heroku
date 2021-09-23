@@ -25,12 +25,12 @@ app.get('', (req, res) => {
     res.render('index', {});
 });
 
-app.get('/schedule', (req, res) => {
-    res.render('schedule', {});
-});
-
-app.get('/weather', (req, res) => {
-    res.render('weather', {});
+const url = require('url');
+let pathUrl;
+app.use((req, res) => {
+    pathUrl = url.parse(req.url).path;
+    if (pathUrl.startsWith('/')) pathUrl = pathUrl.substring(1);
+    res.render(pathUrl, {});
 });
 
 app.listen(PORT, () => {
