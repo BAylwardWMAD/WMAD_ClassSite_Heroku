@@ -26,12 +26,26 @@ app.get('', (req, res) => {
 });
 
 const url = require('url');
-let pathUrl;
+
+app.get('/weather/key', (req, res) => {
+    const weatherAPI = {
+        key: process.env.WEATHERAPI_KEY,
+        uri: process.env.WEATHERURI
+    };
+
+    res.status(200).json(JSON.stringify(weatherAPI));
+})
+
 app.use((req, res) => {
-    pathUrl = url.parse(req.url).path;
+    let pathUrl = url.parse(req.url).path;
     if (pathUrl.startsWith('/')) pathUrl = pathUrl.substring(1);
+
     res.render(pathUrl, {});
 });
+
+app.get('*', (req, res) => {
+    res.send('<h1>Page not found</h1>');
+})
 
 app.listen(PORT, () => {
     console.log(`Server is up and running on ${PORT}`)

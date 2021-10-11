@@ -51,5 +51,10 @@ if (document.querySelector('.schedule-intro')) {
 }
 
 if (document.querySelector('.weather-section_container')) {
-    weather.weatherSearch();
+    fetch('/weather/key').then(res => {
+        res.json().then(data => {
+            const apiKey = JSON.parse(data);
+            weather.weatherSearch(apiKey.uri, apiKey.key);
+        })
+    })
 }

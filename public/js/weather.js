@@ -1,9 +1,4 @@
-const apiKey = {
-    key: '56a6725cd93e2c8d09bec051fc6a726b',
-    base: 'https://api.openweathermap.org/data/2.5/',
-};
-
-export function weatherSearch() {
+export function weatherSearch(uri, key) {
     const searchBox = document.querySelector('.search-box');
     searchBox.addEventListener('keypress', setQuery);
     window.addEventListener('load', () => {
@@ -20,7 +15,7 @@ export function weatherSearch() {
 
     function getResults(query) {
         if (query.trim().length < 3) return;
-        fetch(`${apiKey.base}weather?q=${query}&units=metric&appid=${apiKey.key}`).then(weather => {
+        fetch(`${uri}weather?q=${query}&units=metric&appid=${key}`).then(weather => {
             return weather.json();;
         }).then(displayResults);
     };
@@ -59,7 +54,7 @@ export function weatherSearch() {
 
     function get5DayForecast(query) {
         if (query.trim().length < 3) return;
-        fetch(`${apiKey.base}forecast?q=${query}&units=metric&appid=${apiKey.key}`).then(weather => {
+        fetch(`${uri}forecast?q=${query}&units=metric&appid=${key}`).then(weather => {
             return weather.json();;
         }).then(display5DayResults);
     };
